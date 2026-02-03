@@ -1,0 +1,87 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7fb;
+  color: #111;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin: 12px 0 20px;
+  flex-wrap: wrap;
+}
+
+button {
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #1f6feb;
+  color: white;
+  font-weight: 600;
+}
+
+button:hover {
+  filter: brightness(0.95);
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 14px 0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.msg {
+  margin: 8px 0 12px;
+  color: #444;
+  min-height: 18px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.table th, .table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e7e7e7;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table th {
+  background: #f1f5ff;
+  font-weight: 700;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: #eef2ff;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+
+.ok {
+  color: #0a7a2f;
+  font-weight: 700;
+}
+
+.no {
+  color: #b00020;
+  font-weight: 700;
+}

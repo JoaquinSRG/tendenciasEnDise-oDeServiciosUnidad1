@@ -3,36 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Cliente con fetch - tablas</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Cliente con fetch 3 APIs publicas</h1>
+  <h1>Cliente con fetch 3 APIs publicas - Salida en tablas</h1>
 
-  <button onclick="cargarAPI('https://pokeapi.co/api/v2/pokemon/pikachu', 'out1')">PokeAPI</button>
-  <button onclick="cargarAPI('https://jsonplaceholder.typicode.com/todos/1', 'out2')">JSONPlaceholder</button>
-  <button onclick="cargarAPI('https://catfact.ninja/fact', 'out3')">Cat Facts</button>
+  <div class="buttons">
+    <button id="btnPoke">PokeAPI</button>
+    <button id="btnTodo">JSONPlaceholder</button>
+    <button id="btnCat">Cat Facts</button>
+  </div>
 
-  <h3>Resultado API 1</h3>
-  <pre id="out1"></pre>
-  <h3>Resultado API 2</h3>
-  <pre id="out2"></pre>
-  <h3>Resultado API 3</h3>
-  <pre id="out3"></pre>
+  <section class="card">
+    <h2>PokeAPI</h2>
+    <div id="pokeMsg" class="msg"></div>
+    <div id="pokeTableWrap"></div>
+  </section>
 
-  <script>
-    function cargarAPI(url, outputId) {
-      const output = document.getElementById(outputId);
-      output.textContent = "Cargando...";
+  <section class="card">
+    <h2>JSONPlaceholder</h2>
+    <div id="todoMsg" class="msg"></div>
+    <div id="todoTableWrap"></div>
+  </section>
 
-      fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        output.textContent = JSON.stringify(data, null, 2);
-      })
-      .catch(error => {
-        output.textContent = "Error: " + error.message;
-      });
-    }
-  </script>
+  <section class="card">
+    <h2>Cat Facts</h2>
+    <div id="catMsg" class="msg"></div>
+    <div id="catTableWrap"></div>
+  </section>
+
+  <script src="app.js"></script>
 </body>
 </html>
