@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cliente con fetch - tablas</title>
+  <title>Cliente con fetch - busqueda y tablas</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <h1>Cliente con fetch 3 APIs publicas - Salida en tablas</h1>
 
-  <div class="buttons">
+<body>
+  <h1>Cliente con fetch (3 APIs publicas) - Busqueda y salida en tablas</h1>
+
+  <form id="searchForm" class="search">
+    <label for="queryInput">Busqueda:</label>
+    <input id="queryInput" name="q" type="text" placeholder="Ej: poke pikachu | todo userId:1 | cat sleep"
+      autocomplete="off" required>
+    <button id="btnSearch" type="submit">Buscar</button>
+  </form>
+
+  <!-- <p class="hint">
+    Sintaxis: <code>poke &lt;nombre|id&gt;</code> (ej. <code>poke pikachu</code>),
+    <code>todo &lt;id&gt;</code> (ej. <code>todo 1</code>),
+    <code>todo userId:&lt;n&gt;</code> (ej. <code>todo userId:1</code>),
+    <code>todo &lt;palabra del título&gt;</code> (ej. <code>todo delectus</code>),
+    <code>cat &lt;palabra&gt;</code> (ej. <code>cat sleep</code>).
+  </p> -->
+
+  <section class="buttons">
     <button id="btnPoke">PokeAPI</button>
     <button id="btnTodo">JSONPlaceholder</button>
     <button id="btnCat">Cat Facts</button>
-  </div>
+  </section>
 
   <section class="card">
     <h2>PokeAPI</h2>
     <pre id="pokeMsg" class="msg"></pre>
-    <pre id="pokeTableWrap"></pre> 
+    <pre id="pokeTableWrap"></pre>
   </section>
 
   <section class="card">
@@ -35,4 +52,5 @@
 
   <script src="app.js"></script>
 </body>
+
 </html>
