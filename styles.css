@@ -39,7 +39,7 @@ button:hover {
   border-radius: 14px;
   padding: 16px;
   margin: 14px 0;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .msg {
@@ -55,7 +55,8 @@ button:hover {
   border-radius: 12px;
 }
 
-.table th, .table td {
+.table th,
+.table td {
   padding: 10px 12px;
   border-bottom: 1px solid #e7e7e7;
   text-align: left;
@@ -84,4 +85,12 @@ button:hover {
 .no {
   color: #b00020;
   font-weight: 700;
+}
+
+.search {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 12px 0 8px;
 }
